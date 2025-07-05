@@ -10,6 +10,7 @@ import {
 import LinkButton from "./LinkButton";
 import Para from "./Para";
 import DomainCard from "./DomainCard";
+import mediumIcon from "../../assets/medium.svg";
 
 const About = () => {
   return (
@@ -34,22 +35,28 @@ const About = () => {
               that showcases my skills in a unique way.
             </Para>
             <div className="flex space-x-4 pt-4">
-              <LinkButton url="#">
+              <LinkButton url="https://github.com/priyankapakhale">
                 <Github
                   size={20}
                   className="group-hover:rotate-12 transition-transform duration-300"
                 />
               </LinkButton>
-              <LinkButton url="#">
+              <LinkButton url="https://www.linkedin.com/in/priyankapakhale/">
                 <Linkedin
                   size={20}
                   className="group-hover:rotate-12 transition-transform duration-300"
                 />
               </LinkButton>
-              <LinkButton url="#">
+              <LinkButton url="mailto:pakhalepriyanka0304@gmail.com">
                 <Mail
                   size={20}
                   className="group-hover:rotate-12 transition-transform duration-300"
+                />
+              </LinkButton>
+              <LinkButton url="https://medium.com/@priyankapakahle">
+                <img
+                  src={mediumIcon}
+                  className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"
                 />
               </LinkButton>
             </div>
