@@ -4,16 +4,29 @@ const skillCategories = [
     skills: [
       "React",
       "React Native",
+      "Expo",
       "TypeScript",
-      "Tailwind CSS",
       "JavaScript",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3",
+      "Storybook",
+      "Accessibility (a11y)",
+      "Next.js",
     ],
     icon: "🎨",
     color: "from-purple-500 to-pink-500",
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "REST APIs", "JWT", "Microservices"],
+    skills: [
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "JWT",
+      "Microservices",
+      "Serverless Framework",
+    ],
     icon: "⚙️",
     color: "from-blue-500 to-cyan-500",
   },
@@ -24,10 +37,39 @@ const skillCategories = [
     color: "from-green-500 to-emerald-500",
   },
   {
+    title: "Testing",
+    skills: ["Jest", "Cypress", "Test Driver Developement (TDD)"],
+    icon: "🧪",
+    color: "from-amber-500 to-yellow-500",
+  },
+  {
     title: "Tools & Cloud",
-    skills: ["Git", "Docker", "AWS", "Vercel", "Postman"],
+    skills: [
+      "Git",
+      "Docker",
+      "AWS",
+      "CI/CD",
+      "Vercel",
+      "Postman",
+      "Webpack",
+      "Github copilot",
+      "ChatGPT APIs",
+      "Google APIs",
+      "Jira",
+    ],
     icon: "🚀",
     color: "from-orange-500 to-red-500",
+  },
+  {
+    title: "Other",
+    skills: [
+      "Agile/Scrum",
+      "Monorepo",
+      "Design Systems",
+      "Performance Optimization",
+    ],
+    icon: "⚡",
+    color: "from-indigo-500 to-purple-500",
   },
 ];
 
@@ -43,11 +85,11 @@ const Skills = () => {
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="group bg-white rounded-xl p-6 shadow-lg"
+              className="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className="flex items-center mb-4">
                 <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center text-2xl mr-4`}
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center text-2xl mr-4 group-hover:scale-110 transition-transform duration-300`}
                 >
                   {category.icon}
                 </div>
