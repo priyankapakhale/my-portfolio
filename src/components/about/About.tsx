@@ -35,13 +35,22 @@ const About = () => {
             </Para>
             <div className="flex space-x-4 pt-4">
               <LinkButton url="#">
-                <Github size={20} />
+                <Github
+                  size={20}
+                  className="group-hover:rotate-12 transition-transform duration-300"
+                />
               </LinkButton>
               <LinkButton url="#">
-                <Linkedin size={20} />
+                <Linkedin
+                  size={20}
+                  className="group-hover:rotate-12 transition-transform duration-300"
+                />
               </LinkButton>
               <LinkButton url="#">
-                <Mail size={20} />
+                <Mail
+                  size={20}
+                  className="group-hover:rotate-12 transition-transform duration-300"
+                />
               </LinkButton>
             </div>
           </div>
@@ -49,12 +58,12 @@ const About = () => {
           <div className="grid grid-cols-2 gap-6">
             <DomainCard
               title="Frontend"
-              subtitle="React, Next.js, TypeScript"
+              subtitle="React, React Native, Next.js, TypeScript"
               icon={<Code className="text-purple-600 mb-4" size={32} />}
             />
             <DomainCard
               title="Backend"
-              subtitle="Node.js, Express, APIs"
+              subtitle="Node.js, Express, REST API"
               icon={<Server className="text-blue-600 mb-4" size={32} />}
             />
             <DomainCard
