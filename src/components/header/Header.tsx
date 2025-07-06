@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const portfolioSections = ["home", "about", "skills", "projects", "contact"];
-const personalSections = ["blog", "photography"];
+const personalSections = ["blog", "astrophotography"];
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
@@ -39,7 +39,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 w-full bg-white shadow-md z-10">
+    <header className="sticky top-0 w-full bg-white shadow-md z-20">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-xl font-bold">Priyanka Pakhale</div>
         <div className="hidden md:flex space-x-8">

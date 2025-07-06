@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/blog" element={<Blog />} />
-        <Route path="/photography" element={<Photography />} />
+        <Route path="/astrophotography" element={<Photography />} />
         <Route path="/" element={<Portfolio />} />
       </Routes>
       <Footer />
