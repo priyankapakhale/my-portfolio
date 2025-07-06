@@ -1,14 +1,18 @@
 import beeeater from "../../assets/photos/beeeater.jpg";
 import drongo from "../../assets/photos/drongo.jpg";
-import sunset from "../../assets/photos/sunset.jpg";
-import flagstaff from "../../assets/photos/flagstaff.jpg";
-import kite1 from "../../assets/photos/kite1.jpg";
-import kite2 from "../../assets/photos/kite2.jpg";
+// @ts-expect-error des
+import sunset from "../../assets/photos/sunset.JPG";
+// @ts-expect-error des
+import flagstaff from "../../assets/photos/flagstaff.JPG";
+// @ts-expect-error des
+import kite1 from "../../assets/photos/kite1.JPG";
+// @ts-expect-error des
+import kite2 from "../../assets/photos/kite2.JPG";
 
 const OtherPhotos = () => {
   return (
     <div className="relative z-10 px-6 py-10">
-      <p className="text-xl md:text-2xl text-gray-300  mx-auto leading-relaxed text-center pb-10">
+      <p className="text-xl md:text-2xl text-gray-300  mx-auto leading-relaxed text-center p-10">
         While my passion lies in astrophotography, I occasionally enjoy
         capturing the beauty of wildlife and landscapes too
       </p>

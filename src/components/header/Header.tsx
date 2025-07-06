@@ -61,6 +61,7 @@ const Header = () => {
         <div className="flex space-x-2">
           {personalSections.map((section) => (
             <Link
+              key={section}
               to={`/${section}`}
               onClick={() => goToPersonalSection(section)}
               className={`capitalize transition-all duration-300 px-3 py-2 rounded-lg relative overflow-hidden group ${
