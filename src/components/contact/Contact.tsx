@@ -11,7 +11,7 @@ import {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
@@ -28,7 +28,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Information */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
+          <div className="bg-white rounded-2xl px-6 py-8 sm:p-8 shadow-lg">
             <h3 className="text-2xl font-bold mb-6 flex items-center">
               <User className="mr-3 text-purple-600" size={24} />
               Get In Touch
@@ -43,7 +43,7 @@ const Contact = () => {
                   <p className="text-sm text-gray-500">Email</p>
                   <a
                     href="mailto:pakhalepriyanka0304@gmail.com"
-                    className="text-lg font-semibold hover:text-purple-600 transition-colors"
+                    className="text-lg font-semibold hover:text-purple-600 transition-colors break-all"
                   >
                     pakhalepriyanka0304@gmail.com
                   </a>
@@ -57,7 +57,7 @@ const Contact = () => {
                 <div>
                   <p className="text-sm text-gray-500">Phone</p>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+918591284096"
                     className="text-lg font-semibold hover:text-purple-600 transition-colors"
                   >
                     (+91) 8591284096
@@ -91,7 +91,7 @@ const Contact = () => {
             </div>
 
             {/* Professional Links */}
-            <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="mt-8 pt-6 border-t border-gray-200">
               <h4 className="font-semibold mb-4">Professional Profiles</h4>
               <div className="flex space-x-4">
                 <a
@@ -118,7 +118,7 @@ const Contact = () => {
 
           {/* Call to Action */}
           <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl px-6 py-8 sm:p-8 shadow-lg">
               <h3 className="text-2xl font-bold mb-6">Why Choose Me?</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -161,8 +161,9 @@ const Contact = () => {
                 className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold duration-300 shadow-lg flex items-center justify-center group relative overflow-hidden"
               >
                 <Mail size={20} className="mr-3" />
-                <span className="relative z-10">Send Email</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0"></div>
+                <span className="relative z-10 whitespace-nowrap">
+                  Send Email
+                </span>
               </a>
 
               <a
@@ -171,7 +172,7 @@ const Contact = () => {
                 className="w-full px-8 py-4 rounded-full text-lg font-semibold border-2 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
               >
                 <Download size={20} className="mr-3" />
-                Download Resume
+                <span className="whitespace-nowrap">Download Resume</span>
               </a>
 
               <a
@@ -179,7 +180,7 @@ const Contact = () => {
                 className="w-full px-8 py-4 rounded-full text-lg font-semibold border-2 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
               >
                 <Calendar size={20} className="mr-3" />
-                Schedule Interview
+                <span className="whitespace-nowrap">Schedule Interview</span>
               </a>
             </div>
           </div>
