@@ -19,10 +19,22 @@ const Heading = () => {
             hidden beauty of deep space.
           </p>
         </div>
-        <div className="flex gap-10 h-96 justify-center">
-          <img src={meWithTelescope} alt="Me with telescope" />
-          <img src={capturingM42} alt="Capturing M42" />
-          <img src={gear} alt="My gear" />
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+          <img
+            src={meWithTelescope}
+            alt="Me with telescope"
+            className="w-full md:w-1/3 rounded-xl object-contain max-h-96"
+          />
+          <img
+            src={capturingM42}
+            alt="Capturing M42"
+            className="w-full md:w-1/3 rounded-xl object-contain max-h-96"
+          />
+          <img
+            src={gear}
+            alt="My gear"
+            className="w-full md:w-1/3 rounded-xl object-contain max-h-96"
+          />
         </div>
       </div>
     </div>

@@ -11,51 +11,67 @@ import kite2 from "../../assets/photos/kite2.JPG";
 
 const OtherPhotos = () => {
   return (
-    <div className="relative z-10 px-6 py-10">
-      <p className="text-xl md:text-2xl text-gray-300  mx-auto leading-relaxed text-center p-10">
+    <div className="relative z-10 px-4 sm:px-6 py-10">
+      <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mx-auto leading-relaxed text-center p-6 sm:p-10">
         While my passion lies in astrophotography, I occasionally enjoy
         capturing the beauty of wildlife and landscapes too
       </p>
 
-      <div className="flex gap-10 justify-center flex-wrap">
-        <div>
+      {/* Portrait photos (bee eater and drongo) */}
+      <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center mb-8 sm:mb-12">
+        <div className="w-full sm:flex-1 sm:max-w-sm mx-auto sm:mx-0">
           <img
             src={beeeater}
-            alt="Capturing M42"
-            style={{ height: 600 }}
-            className="rounded-xl"
+            alt="Bee eater"
+            className="w-full h-96 sm:w-auto sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-xl sm:mx-auto"
           />
-          <div className="text-center mt-4 italic">Bee eater</div>
+          <div className="text-center mt-4 italic text-gray-300">Bee eater</div>
         </div>
-        <div>
+        <div className="w-full sm:flex-1 sm:max-w-sm mx-auto sm:mx-0">
           <img
             src={drongo}
-            alt="Capturing M42"
-            style={{ height: 600 }}
-            className="rounded-xl"
+            alt="Drongo"
+            className="w-full h-96 sm:w-auto sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-xl sm:mx-auto"
           />
-          <div className="text-center mt-4 italic">Drongo</div>
+          <div className="text-center mt-4 italic text-gray-300">Drongo</div>
         </div>
-        <div className="w-full" />
-        <div>
-          <img src={kite1} alt="Capturing M42" className="h-96 rounded-xl" />
-          <div className="text-center mt-4 italic">Kite</div>
+      </div>
+
+      {/* Landscape photos in a grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
+        <div className="w-full max-w-sm">
+          <img
+            src={kite1}
+            alt="Kite flying"
+            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
+          />
+          <div className="text-center mt-4 italic text-gray-300">Kite</div>
         </div>
-        <div>
-          <img src={kite2} alt="Capturing M42" className="h-96 rounded-xl" />
-          <div className="text-center mt-4 italic">Kite</div>
+        <div className="w-full max-w-sm">
+          <img
+            src={kite2}
+            alt="Kite flying"
+            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
+          />
+          <div className="text-center mt-4 italic text-gray-300">Kite</div>
         </div>
-        <div>
-          <img src={sunset} alt="Capturing M42" className="h-96 rounded-xl" />
-          <div className="text-center mt-4 italic">Sunset on beach</div>
+        <div className="w-full max-w-sm">
+          <img
+            src={sunset}
+            alt="Sunset on beach"
+            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
+          />
+          <div className="text-center mt-4 italic text-gray-300">
+            Sunset on beach
+          </div>
         </div>
-        <div>
+        <div className="w-full max-w-sm">
           <img
             src={flagstaff}
-            alt="Capturing M42"
-            className="h-96 rounded-xl"
+            alt="Flagstaff, Arizona during trek"
+            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
           />
-          <div className="text-center mt-4 italic">
+          <div className="text-center mt-4 italic text-gray-300">
             Flagstaff, Arizona (during trek)
           </div>
         </div>

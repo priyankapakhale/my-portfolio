@@ -50,21 +50,28 @@ const FeaturedPhotos = () => {
         </h2>
       </div>
 
-      <div className="mb-12 flex flex-col gap-8 justify-center">
+      <div className="mb-12 flex flex-col gap-12">
         {featuredImages.map((featuredImage) => (
-          <div className="flex">
-            <div className="relative rounded-2xl overflow-hidden cursor-pointer group flex-1">
+          <div
+            key={featuredImage.id}
+            className="flex flex-col md:flex-row gap-8 items-stretch"
+          >
+            {/* Image Card */}
+            <div className="relative rounded-2xl overflow-hidden cursor-pointer group flex-1 aspect-video md:min-h-[24rem]">
               <img
                 src={featuredImage.image}
                 alt={featuredImage.title}
-                className="w-full h-96 md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-cyan-400">
+
+              {/* Hover Overlay (only for md and above) */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 md:p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-cyan-400">
                   {featuredImage.title}
                 </h3>
-                <div className="flex flex-wrap gap-4 text-sm">
+                <div className="flex flex-wrap gap-3 text-sm">
                   <div className="flex items-center gap-2 bg-gray-900/70 px-3 py-1 rounded-full">
                     <MapPin className="w-4 h-4 text-yellow-400" />
                     <span>{featuredImage.location}</span>
@@ -84,20 +91,50 @@ const FeaturedPhotos = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-1 p-16 flex flex-col gap-2">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-cyan-400">
+
+            {/* Always-visible details (mobile & desktop) */}
+            <div className="flex-1 px-2 md:px-4 lg:px-8 flex flex-col gap-3 justify-center">
+              {/* Title again for mobile (hidden on md) */}
+              <h3 className="text-xl md:hidden font-bold text-cyan-400">
                 {featuredImage.title}
               </h3>
-              <div className="italic">{featuredImage.experience}</div>
-              <div className="italic">{featuredImage.distanceFromEarth}</div>
-              <h4 className="text-blue-300">
-                <b>Equipment:</b> Explore Scientific 150mm f/5.0 (750mm focal
-                length) + Canon 90D: Stacked and processed
-              </h4>
+
+              {/* Tag details for mobile */}
+              <div className="flex flex-wrap gap-3 text-sm md:hidden">
+                <div className="flex items-center gap-2 bg-gray-900/70 px-3 py-1 rounded-full">
+                  <MapPin className="w-4 h-4 text-yellow-400" />
+                  <span>{featuredImage.location}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-gray-900/70 px-3 py-1 rounded-full">
+                  <Clock className="w-4 h-4 text-purple-400" />
+                  <span>{featuredImage.exposure}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-gray-900/70 px-3 py-1 rounded-full">
+                  <Camera className="w-4 h-4 text-pink-400" />
+                  <span>{featuredImage.camera}</span>
+                </div>
+                <div className="flex items-center gap-2 bg-gray-900/70 px-3 py-1 rounded-full">
+                  <Telescope className="w-4 h-4 text-green-400" />
+                  <span>{featuredImage.telescope}</span>
+                </div>
+              </div>
+
+              <div className="italic text-gray-300">
+                {featuredImage.experience}
+              </div>
+              <div className="italic text-gray-400">
+                {featuredImage.distanceFromEarth}
+              </div>
+              <div className="text-blue-300 font-medium">
+                Equipment:{" "}
+                <span className="font-normal">
+                  {featuredImage.telescope} + {featuredImage.camera}
+                </span>
+              </div>
               <div className="text-blue-200">
                 <b>Location:</b> {featuredImage.location}
               </div>
-              <div className="pt-4 text-blue-200">
+              <div className="pt-4 text-gray-200 leading-relaxed">
                 {featuredImage.description}
               </div>
             </div>
