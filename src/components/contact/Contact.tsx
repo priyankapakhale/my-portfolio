@@ -8,6 +8,7 @@ import {
   Phone,
   User,
 } from "lucide-react";
+import resumeUrl from "../../assets/docs/resume.pdf";
 
 const Contact = () => {
   return (
@@ -169,20 +170,13 @@ const Contact = () => {
               </a>
 
               <a
-                href="/assets/docs/resume.pdf"
-                download
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full px-8 py-4 rounded-full text-lg font-semibold border-2 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
               >
                 <Download size={20} className="mr-3" />
                 <span className="whitespace-nowrap">Download Resume</span>
-              </a>
-
-              <a
-                href="#"
-                className="w-full px-8 py-4 rounded-full text-lg font-semibold border-2 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-              >
-                <Calendar size={20} className="mr-3" />
-                <span className="whitespace-nowrap">Schedule Interview</span>
               </a>
             </div>
           </div>
