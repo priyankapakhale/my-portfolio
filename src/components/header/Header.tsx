@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const portfolioSections = ["home", "about", "skills", "experience", "contact"];
-const personalSections = ["blog", "astrophotography"];
+const personalSections = ["blogs", "astrophotography"];
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
