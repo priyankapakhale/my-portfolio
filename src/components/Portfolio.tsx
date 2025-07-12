@@ -1,7 +1,7 @@
 import About from "./about/About";
 import Contact from "./contact/Contact";
+import Experience from "./experience/WorkExperience";
 import Home from "./home/Home";
-import Projects from "./projects/Projects";
 import Skills from "./skills/Skills";
 
 const Portfolio = () => {
@@ -12,7 +12,7 @@ const Portfolio = () => {
           <Home />
           <About />
           <Skills />
-          <Projects />
+          <Experience />
           <Contact />
         </main>
       </div>

@@ -95,7 +95,8 @@ const Contact = () => {
               <h4 className="font-semibold mb-4">Professional Profiles</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/priyankapakhale/"
+                  target="_blank"
                   className="p-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
                 >
                   <Linkedin
@@ -104,7 +105,8 @@ const Contact = () => {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/priyankapakhale"
+                  target="_blank"
                   className="p-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white rounded-full hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
                 >
                   <Github
@@ -158,7 +160,7 @@ const Contact = () => {
             <div className="space-y-4">
               <a
                 href="mailto:pakhalepriyanka0304@gmail.com?subject=Job Opportunity - Full Stack Developer Position"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold duration-300 shadow-lg flex items-center justify-center group relative overflow-hidden"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl flex items-center justify-center group relative overflow-hidden"
               >
                 <Mail size={20} className="mr-3" />
                 <span className="relative z-10 whitespace-nowrap">
@@ -167,7 +169,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="/resume.pdf"
+                href="/assets/docs/resume.pdf"
                 download
                 className="w-full px-8 py-4 rounded-full text-lg font-semibold border-2 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white"
               >

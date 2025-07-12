@@ -1,4 +1,4 @@
-import { Gamepad2, Github, Play } from "lucide-react";
+import { Gamepad2 } from "lucide-react";
 import type { IProject } from "./Projects";
 
 const FeaturedProject = ({ project }: { project: IProject }) => {
@@ -9,7 +9,7 @@ const FeaturedProject = ({ project }: { project: IProject }) => {
           <div className="flex items-center mb-4">
             <Gamepad2 className="text-purple-600 mr-3" size={28} />
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-              Featured Project
+              Coming soon
             </span>
           </div>
 
@@ -27,7 +27,7 @@ const FeaturedProject = ({ project }: { project: IProject }) => {
             ))}
           </div>
 
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a
               href="#"
               className="flex items-center px-6 py-3 rounded-full shadow-lg group"
@@ -42,7 +42,7 @@ const FeaturedProject = ({ project }: { project: IProject }) => {
               <Github size={18} className="mr-2" />
               <span className="font-semibold">View Code</span>
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className="lg:p-8 p-4">

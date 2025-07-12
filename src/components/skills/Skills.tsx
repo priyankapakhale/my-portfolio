@@ -38,7 +38,12 @@ const skillCategories = [
   },
   {
     title: "Testing",
-    skills: ["Jest", "Cypress", "Test Driver Developement (TDD)"],
+    skills: [
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "Test Driven Developement (TDD)",
+    ],
     icon: "🧪",
     color: "from-amber-500 to-yellow-500",
   },

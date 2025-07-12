@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-const portfolioSections = ["home", "about", "skills", "projects", "contact"];
+const portfolioSections = ["home", "about", "skills", "experience", "contact"];
 const personalSections = ["blog", "astrophotography"];
 
 const Header = () => {
