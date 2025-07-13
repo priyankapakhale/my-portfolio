@@ -1,21 +1,24 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import AnimatedBackground from "./AnimatedBackground";
-import FeaturedPhotos from "./FeaturedPhotos";
 import Heading from "./Heading";
+import FeaturedPhotos from "./FeaturedPhotos";
 import OtherPhotos from "./OtherPhotos";
 
-const Photography = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+const Photography: React.FC = () => {
+  useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), []);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative">
+    <section
+      id="photography"
+      className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden"
+    >
       <AnimatedBackground />
-      <Heading />
-      <FeaturedPhotos />
-      <OtherPhotos />
-    </div>
+      <div className="relative z-10">
+        <Heading />
+        <FeaturedPhotos />
+        <OtherPhotos />
+      </div>
+    </section>
   );
 };
 

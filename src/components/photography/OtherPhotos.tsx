@@ -9,75 +9,116 @@ import kite1 from "../../assets/photos/kite1.JPG";
 // @ts-expect-error des
 import kite2 from "../../assets/photos/kite2.JPG";
 
-const OtherPhotos = () => {
-  return (
-    <div className="relative z-10 px-4 sm:px-6 py-10">
-      <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mx-auto leading-relaxed text-center p-6 sm:p-10">
-        While my passion lies in astrophotography, I occasionally enjoy
-        capturing the beauty of wildlife and landscapes too
-      </p>
+const portraitPhotos = [
+  {
+    src: beeeater,
+    alt: "Bee eater",
+    caption: "Bee eater",
+    type: "wildlife",
+    orientation: "portrait",
+  },
+  {
+    src: drongo,
+    alt: "Drongo",
+    caption: "Drongo",
+    type: "wildlife",
+    orientation: "portrait",
+  },
+];
 
-      {/* Portrait photos (bee eater and drongo) */}
-      <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center mb-8 sm:mb-12">
-        <div className="w-full sm:flex-1 sm:max-w-sm mx-auto sm:mx-0">
-          <img
-            src={beeeater}
-            alt="Bee eater"
-            className="w-full h-96 sm:w-auto sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-xl sm:mx-auto"
-          />
-          <div className="text-center mt-4 italic text-gray-300">Bee eater</div>
-        </div>
-        <div className="w-full sm:flex-1 sm:max-w-sm mx-auto sm:mx-0">
-          <img
-            src={drongo}
-            alt="Drongo"
-            className="w-full h-96 sm:w-auto sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-xl sm:mx-auto"
-          />
-          <div className="text-center mt-4 italic text-gray-300">Drongo</div>
+const landscapePhotos = [
+  {
+    src: kite1,
+    alt: "Kite",
+    caption: "Kite",
+    type: "landscape",
+    orientation: "landscape",
+  },
+  {
+    src: kite2,
+    alt: "Kite",
+    caption: "Kite",
+    type: "landscape",
+    orientation: "landscape",
+  },
+  {
+    src: sunset,
+    alt: "Sunset on beach",
+    caption: "Sunset on beach",
+    type: "landscape",
+    orientation: "landscape",
+  },
+  {
+    src: flagstaff,
+    alt: "Flagstaff, Arizona during trek",
+    caption: "Flagstaff, Arizona (during trek)",
+    type: "landscape",
+    orientation: "landscape",
+  },
+];
+
+const OtherPhotos: React.FC = () => (
+  <div className="relative z-10 px-6 py-16">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+          Beyond the Stars
+        </h2>
+        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          While my passion lies in astrophotography, I occasionally enjoy
+          capturing the beauty of wildlife and landscapes too
+        </p>
+      </div>
+
+      {/* Wildlife Photos - Portrait Orientation */}
+      <div className="mb-16">
+        <div className="flex flex-col sm:flex-row gap-8 justify-center items-start max-w-4xl mx-auto">
+          {portraitPhotos.map((photo, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-green-500/25 transition-all duration-500 flex-1 max-w-sm mx-auto"
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full h-[500px] sm:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-6 right-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h4 className="text-xl font-semibold text-green-400">
+                  {photo.caption}
+                </h4>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Landscape photos in a grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
-        <div className="w-full max-w-sm">
-          <img
-            src={kite1}
-            alt="Kite flying"
-            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
-          />
-          <div className="text-center mt-4 italic text-gray-300">Kite</div>
-        </div>
-        <div className="w-full max-w-sm">
-          <img
-            src={kite2}
-            alt="Kite flying"
-            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
-          />
-          <div className="text-center mt-4 italic text-gray-300">Kite</div>
-        </div>
-        <div className="w-full max-w-sm">
-          <img
-            src={sunset}
-            alt="Sunset on beach"
-            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
-          />
-          <div className="text-center mt-4 italic text-gray-300">
-            Sunset on beach
-          </div>
-        </div>
-        <div className="w-full max-w-sm">
-          <img
-            src={flagstaff}
-            alt="Flagstaff, Arizona during trek"
-            className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-xl"
-          />
-          <div className="text-center mt-4 italic text-gray-300">
-            Flagstaff, Arizona (during trek)
-          </div>
+      {/* Landscape Photos - Landscape Orientation */}
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {landscapePhotos.map((photo, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-blue-500/25 transition-all duration-500"
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <h4 className="text-lg font-semibold text-blue-400">
+                  {photo.caption}
+                </h4>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default OtherPhotos;
